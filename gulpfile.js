@@ -56,7 +56,7 @@ gulp.task('server:assets:dev',function(){
 
     connect.server({
         port:80,
-        root:'public/assets/src/js',
+        root:'public/assets/src',
         host:'assets.dev.com',
         livereload:false,
 

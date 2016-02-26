@@ -3,7 +3,7 @@
  */
 
 console.info('library Player loaded!')
-define(['vendor/inherit'],function(inherit,Player){
+define(['vendor/inherit'],function(inherit){
     console.info('library Player execute!')
     var Player=inherit({
         __constructor:function(){
