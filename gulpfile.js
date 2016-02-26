@@ -10,18 +10,12 @@ var uglify = require('gulp-uglify'),
     clean=require('gulp-clean');
 require('es6-shim');
 gulp.task('server:web',['watch:html'],function(){
-
-
     connect.server({
         port:8080,
         root:'www',
         host:'dev.com',
         livereload:true,
-
-
-
     });
-
 
 });
 
@@ -56,14 +50,9 @@ gulp.task('minify:js',function(){
 
 gulp.task('build:js',['minify:js','concat:js']);
 gulp.task('concat:js',['minify:js'],function(){
-    //return gulp.src(['public/assets/build/js/vendors/require.js','public/assets/build/js/configs/require.js'])
-    //.pipe(concat('require.js'))
-    //.pipe(gulp.dest('public/assets/build/js/vendors'))
-
 
 });
 gulp.task('server:assets:dev',function(){
-
 
     connect.server({
         port:80,
@@ -76,9 +65,7 @@ gulp.task('server:assets:dev',function(){
 
 });
 
-
 gulp.task('server:assets:production',function(){
-
 
     connect.server({
         port:80,
