@@ -9,7 +9,6 @@ requirejs.config({
         jquery:'../vendors/jquery',
         config:'../configs',
         library:'./',
-        requireLib:'../vendors/require'
 
     },
     shim:{

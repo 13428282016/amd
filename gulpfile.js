@@ -76,3 +76,16 @@ gulp.task('server:assets:production',function(){
     });
 
 });
+
+
+gulp.task('server:assets:bundle',function(){
+
+    connect.server({
+        port:80,
+        root:'public/assets/bundle',
+        host:'assets.dev.com',
+
+
+    });
+
+});
