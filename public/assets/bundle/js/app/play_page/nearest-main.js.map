@@ -1,0 +1,16 @@
+{
+  "version": 3,
+  "sources": [
+    "../../statistics.js",
+    "statistics.js",
+    "nearest-main.js"
+  ],
+  "names": [],
+  "mappings": "AAAA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA,AC7CA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA,ACvBA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA",
+  "file": "app/play_page/nearest-main.js",
+  "sourcesContent": [
+    "/**\r\n * Created by wmj on 2016/2/25.\r\n */\r\n\r\n\r\n\r\nconsole.info('library Statistics loaded!');\r\n(function (root, factory) {\r\n    if (typeof kkplay.define === 'function' && kkplay.define.amd) {\r\n        //Allow using this built library as an AMD module\r\n        //in another project. That other project will only\r\n        //see this AMD call, not the internal modules in\r\n        //the closure below.\r\n        kkplay.define('statistics',['vendor/inherit'], factory);\r\n    } else {\r\n        //Browser globals case. Just assign the\r\n        //result to a property on the global.\r\n        root.Statistics = factory(window.inherit);\r\n    }\r\n}(this, function (inherit) {\r\n    console.info('library Statistics executed!')\r\n    var Statistics = inherit({\r\n        __constructor: function () {\r\n\r\n            console.log('a Statistics Object has been created!');\r\n            this.__self.objNums++;\r\n        },\r\n        pv: function () {\r\n            console.log('trigger a pv  statistics!');\r\n\r\n        },\r\n        vv: function () {\r\n            console.log('trigger a vv statistics!');\r\n        }\r\n\r\n    }, {\r\n        objNums: 0,\r\n        getObjNums: function () {\r\n            return this.objNums;\r\n        }\r\n    });\r\n\r\n    return Statistics;\r\n}));\r\n\n",
+    "/**\r\n * Created by wmj on 2016/2/25.\r\n */\r\nconsole.info('app/play_page/statistics loaded!')\r\n    kkplay.require(['jquery','statistics'],function($,Statistics){\r\n        console.info('app/play_page/statistics execute!')\r\n        var statistics= new Statistics();\r\n\r\n        statistics.vv();\r\n        statistics.pv()\r\n        console.log(Statistics.getObjNums());\r\n\r\n\r\n        console.log($(document.body));\r\n        console.timeEnd('statistics');\r\n    });\r\n\r\n\r\n\r\n\r\n\nkkplay.define(\"app/play_page/statistics\", function(){});\n\n",
+    "/**\r\n * Created by wmj on 2016/2/29.\r\n */\r\nconsole.time('player');\r\nconsole.time('statistics');\r\nconsole.info('main loaded!')\r\n\r\n\r\n\r\n\r\nconsole.info('main execute!')\r\nkkplay.require(['app/play_page/statistics'],function(){\r\n\r\n});\r\n\r\n\r\n\nkkplay.define(\"app/play_page/nearest-main\", function(){});\n\n"
+  ]
+}

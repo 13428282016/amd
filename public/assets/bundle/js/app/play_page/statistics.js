@@ -2,7 +2,7 @@
  * Created by wmj on 2016/2/25.
  */
 console.info('app/play_page/statistics loaded!')
-    require(['jquery','statistics'],function($,Statistics){
+    kkplay.require(['jquery','statistics'],function($,Statistics){
         console.info('app/play_page/statistics execute!')
         var statistics= new Statistics();
 
@@ -10,8 +10,9 @@ console.info('app/play_page/statistics loaded!')
         statistics.pv()
         console.log(Statistics.getObjNums());
 
-        var $=require('jquery');
+
         console.log($(document.body));
+        console.timeEnd('statistics');
     });
 
 

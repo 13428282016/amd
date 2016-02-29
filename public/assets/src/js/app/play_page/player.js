@@ -18,6 +18,7 @@ console.info('app/play_page/player loaded!')
         var flashPlayer= new FlashPlayer();
         flashPlayer.play();
         console.log(FlashPlayer.getObjNums());
+        console.timeEnd('player');
     });
 
 

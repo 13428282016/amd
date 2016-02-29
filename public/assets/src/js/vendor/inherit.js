@@ -181,7 +181,7 @@ if(typeof modules === 'object') {
     defineAsGlobal = false;
 }
 
-if(typeof define === 'function') {
+if(typeof define === 'function' && define.amd) {
     define(function(require, exports, module) {
         module.exports = inherit;
     });

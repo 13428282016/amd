@@ -3,7 +3,7 @@
  */
 
 console.info('app/play_page/player loaded!')
-    require(['player','h5_player','flash_player'],function(Player,H5Player,FlashPlayer){
+    kkplay.require(['player','h5_player','flash_player'],function(Player,H5Player,FlashPlayer){
         console.info('app/play_page/player execute!')
 
         var player= new Player();
@@ -18,6 +18,7 @@ console.info('app/play_page/player loaded!')
         var flashPlayer= new FlashPlayer();
         flashPlayer.play();
         console.log(FlashPlayer.getObjNums());
+        console.timeEnd('player');
     });
 
 

@@ -10,8 +10,9 @@ console.info('app/play_page/statistics loaded!')
         statistics.pv()
         console.log(Statistics.getObjNums());
 
-        var $=require('jquery');
+
         console.log($(document.body));
+        console.timeEnd('statistics');
     });
 
 

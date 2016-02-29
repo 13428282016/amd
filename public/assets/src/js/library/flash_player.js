@@ -9,8 +9,23 @@
  * Created by wmj on 2016/2/25.
  */
 
-console.info('libraryFlashPlayer loaded!')
-define(['vendor/inherit','player'],function(inherit,Player){
+console.info('libraryFlashPlayer loaded!');
+
+(function (root, factory) {
+    if (typeof define === 'function' && define.amd) {
+        //Allow using this built library as an AMD module
+        //in another project. That other project will only
+        //see this AMD call, not the internal modules in
+        //the closure below.
+        define(['vendor/inherit','player'], factory);
+    } else {
+        //Browser globals case. Just assign the
+        //result to a property on the global.
+        root.FlashPlayer = factory(window.inherit,window.Player);
+    }
+}(this, function (inherit,Player) {
+
+
     console.info(' library FlashPlayer execute!')
     var FlashPlayer=inherit(Player,{
 
@@ -51,4 +66,4 @@ define(['vendor/inherit','player'],function(inherit,Player){
     return FlashPlayer;
 
 
-});
+}));

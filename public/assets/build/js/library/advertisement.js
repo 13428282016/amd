@@ -1,0 +1,2 @@
+console.info("library Advertisement loaded!"),function(e,n){"function"==typeof define&&define.amd?define(["vendor/inherit"],n):e.Advertisement=n(window.inherit)}(this,function(e){console.info("library Advertisement Execute!");var n=e({__constructor:function(){console.log("a Advertisement Object has been created!"),this.__self.objNums++}},{objNums:0,getObjNums:function(){return this.objNums}});return n});
+//# sourceMappingURL=../source_maps/library/advertisement.js.map

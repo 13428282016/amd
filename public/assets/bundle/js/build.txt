@@ -1,7 +1,6 @@
 
 app/play_page/main.js
 ----------------
-requireLib.js
 vendor/inherit.js
 h5_player.js
 flash_player.js
@@ -10,3 +9,18 @@ jquery.js
 statistics.js
 app/play_page/statistics.js
 app/play_page/main.js
+
+common/play_page.js
+----------------
+common/play_page.js
+jquery.js
+vendor/inherit.js
+player.js
+flash_player.js
+h5_player.js
+
+app/play_page/nearest-main.js
+----------------
+statistics.js
+app/play_page/statistics.js
+app/play_page/nearest-main.js

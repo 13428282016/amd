@@ -181,8 +181,8 @@ if(typeof modules === 'object') {
     defineAsGlobal = false;
 }
 
-if(typeof define === 'function') {
-    define(function(require, exports, module) {
+if(typeof kkplay.define === 'function' && kkplay.define.amd) {
+    kkplay.define(function(require, exports, module) {
         module.exports = inherit;
     });
     defineAsGlobal = false;

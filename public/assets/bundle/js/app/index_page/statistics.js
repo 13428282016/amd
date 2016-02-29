@@ -2,7 +2,7 @@
  * Created by wmj on 2016/2/26.
  */
 console.info('app/play_page/statistics loaded!')
-require(['jquery','statistics'],function($,Statistics){
+kkplay.require(['jquery','statistics'],function($,Statistics){
 
     console.info('app/play_page/statistics execute!')
     var statistics= new Statistics();
