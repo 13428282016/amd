@@ -8,8 +8,8 @@
 
     baseUrl:'./public/assets/src/js/library',//如果使用命r.js,则./相当于执行命令的项目，如果使用路径node r.js 则./相当于build.js文件的位置
     mainConfigFile:'./public/assets/src/js/config/require.js',//buuild.js指定的配置会覆盖配置文件的位置覆盖
-    //optimize:'uglify2',//指定问这个压缩模式可以看到打包前的文件，否则只可以看到压缩前的文件
-    optimize:'none',
+    optimize:'uglify2',//指定问这个压缩模式可以看到打包前的文件，否则只可以看到压缩前的文件
+   // optimize:'none',
     generateSourceMaps:true,//生成sourceMap
 
     //include:'requireLib',//额外包含一些文件打包到入口文件
@@ -26,12 +26,12 @@
         {
             name:'common/play_page',
             include:['jquery','flash_player','h5_player'],
-        },
-        {
-            name:'app/play_page/nearest-main',
             excludeShallow:[
                 'player'
             ],
+        },
+        {
+            name:'app/play_page/nearest-main',
             exclude:['common/play_page'],
         }
     ],

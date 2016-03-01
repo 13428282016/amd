@@ -1,3 +1,2 @@
-/**
- * Created by wmj on 2016/2/29.
- */
+
+//# sourceMappingURL=umd_header.js.map

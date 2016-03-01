@@ -1,0 +1,2 @@
+console.info("app/play_page/player loaded!"),kkplay.require(["player","h5_player","flash_player","jquery"],function(e,l,a,o){console.info("app/play_page/player execute!"),o(function(){var o=new e;o.play(),console.log(e.getObjNums());var p=new l;p.play(),console.log(l.getObjNums());var n=new a;n.play(),console.log(a.getObjNums()),console.timeEnd("player")})});
+//# sourceMappingURL=dom_ready_player.js.map

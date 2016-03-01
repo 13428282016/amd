@@ -15,7 +15,6 @@ common/play_page.js
 common/play_page.js
 jquery.js
 vendor/inherit.js
-player.js
 flash_player.js
 h5_player.js
 
