@@ -26,7 +26,8 @@
   "dependencies": {
     "inherit": "^2.2.3",
     "jquery": "^1.11.3",
-    "requirejs": "^2.1.22"
+    "requirejs": "^2.1.22",
+    "wolfy87-eventemitter": "^4.3.0"
   },
   "devDependencies": {
     "commander": "^2.9.0",

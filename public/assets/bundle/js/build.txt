@@ -2,6 +2,7 @@
 app/play_page/main.js
 ----------------
 vendor/inherit.js
+vendor/event_emitter.js
 h5_player.js
 flash_player.js
 app/play_page/player.js
@@ -15,6 +16,7 @@ common/play_page.js
 common/play_page.js
 jquery.js
 vendor/inherit.js
+vendor/event_emitter.js
 flash_player.js
 h5_player.js
 
