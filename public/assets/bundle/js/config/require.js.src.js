@@ -4,7 +4,7 @@
 
 
     kkplay.requirejs.config({
-        baseUrl: 'http://assets.dev.com/js/library',
+        baseUrl: 'http://assets.dev.com:8081/js/library',
         paths:{
             vendor:"../vendor",
             app:"../app",
