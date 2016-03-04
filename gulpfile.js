@@ -9,11 +9,22 @@ var uglify = require('gulp-uglify'),
     concat=require('gulp-concat'),
     clean=require('gulp-clean');
 require('es6-shim');
+var program=require('commander');
+
+
+program.version('0.0.1')
+    .option('-e,--entry <items>','entry files',function(val){
+        return val.split(',');
+    })
+    .option('-p --port <n>','port',parseInt)
+    .option('-h --host <n>','host')
+    .parse(process.argv);
+console.log(program);
 gulp.task('server:web',['watch:html'],function(){
     connect.server({
-        port:8080,
+        port:program.port,
         root:'www',
-        host:'dev.com',
+        host:program.host||'dev.com',
         livereload:true,
     });
 
@@ -55,9 +66,9 @@ gulp.task('concat:js',['minify:js'],function(){
 gulp.task('server:assets:dev',function(){
 
     connect.server({
-        port:80,
+        port:program.port,
         root:'public/assets/src',
-        host:'assets.dev.com',
+        host:program.host||'assets.dev.com',
         livereload:false,
 
 
@@ -67,10 +78,11 @@ gulp.task('server:assets:dev',function(){
 
 gulp.task('server:assets:production',function(){
 
+
     connect.server({
-        port:80,
+        port:program.port,
         root:'public/assets/build',
-        host:'assets.dev.com',
+        host:program.host||'assets.dev.com',
 
 
     });
@@ -81,9 +93,9 @@ gulp.task('server:assets:production',function(){
 gulp.task('server:assets:bundle',function(){
 
     connect.server({
-        port:80,
+        port:program.port,
         root:'public/assets/bundle',
-        host:'assets.dev.com',
+        host:program.host||'assets.dev.com',
 
 
     });
