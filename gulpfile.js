@@ -19,7 +19,7 @@ program.version('0.0.1')
     .option('-p --port <n>','port',parseInt)
     .option('-h --host <n>','host')
     .parse(process.argv);
-console.log(program);
+
 gulp.task('server:web',['watch:html'],function(){
     connect.server({
         port:program.port,
